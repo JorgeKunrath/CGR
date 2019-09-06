@@ -22,11 +22,6 @@ img {
   display: block;
 }
 
-.etapas-de-projeto .card {
-  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
-}
-
 .hero .text, .contato .text-acabamento {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +86,7 @@ header .logo .cgr-logo {
 
 header .logo .cgr-logo img {
   width: 100px;
-  padding: 10px 0;
+  padding: 10px 0 0;
 }
 
 header .logo .descricao {
@@ -153,6 +148,8 @@ header nav a i {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 40% 50%;
+     object-position: 40% 50%;
   -webkit-filter: blur(5px);
           filter: blur(5px);
   -webkit-transform: scale(1.1);
@@ -166,22 +163,19 @@ header nav a i {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #C02425;
-  background: linear-gradient(160deg, #7D6504, #310000);
+  background: rbga(0, 0, 0, 0.9);
   color: white;
-  mix-blend-mode: hard-light;
 }
 
 .hero .text h2 {
-  max-width: 70%;
+  max-width: calc(70% - 8vw);
   text-align: center;
-  font-size: 2.5em;
+  font-size: calc(1em + 1.5vw);
 }
 
 @media (max-width: 900px) {
   .hero .text h2 {
-    padding-top: 4em;
-    font-size: 1.3em;
+    padding-top: 5em;
     font-weight: 500;
   }
 }
@@ -200,7 +194,9 @@ header nav a i {
 }
 
 .etapas-de-projeto .card {
-  background: #ffffffaa;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0 2px 5px -2px rgba(238, 101, 22, 0.596), 0 4px 8px -2px rgba(235, 180, 63, 0.3), 0 3px 7px rgba(226, 132, 132, 0.2);
+          box-shadow: 0 2px 5px -2px rgba(238, 101, 22, 0.596), 0 4px 8px -2px rgba(235, 180, 63, 0.3), 0 3px 7px rgba(226, 132, 132, 0.2);
   border-radius: 10px;
   overflow: hidden;
 }

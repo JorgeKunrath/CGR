@@ -3,9 +3,9 @@ $cor-destaque: #E78300;
 
 $site-margin: 5%;
 
-%shadow1 {
-	box-shadow: 0 2px 5px -2px rgba(0,0,0,0.2), 0 4px 8px -2px rgba(0,0,0,0.3);
-}
+// %shadow1 {
+// 	box-shadow: 0 2px 5px -2px rgba(0,0,0,0.2), 0 4px 8px -2px rgba(0,0,0,0.3);
+// }
 %flex-center {
 	display: flex;
 	justify-content: center;
@@ -58,7 +58,7 @@ header {
 			font-family: 'Roboto Slab', serif;
 			img {
 				width: 100px;
-				padding: 10px 0;
+				padding: 10px 0 0;
 			}
 		}
 		.descricao {
@@ -112,6 +112,7 @@ header {
 		width: 100%;
 		height: 100vh;
 		object-fit: cover;
+		object-position: 40% 50%;
 		filter: blur(5px);
 		transform: scale(1.1);
 	}
@@ -124,14 +125,12 @@ header {
 		bottom: 0;
 		right: 0;
 		@extend %flex-center;
-		background: #C02425;
-		background: linear-gradient(160deg, #7D6504, #310000);
+		background: rbga(0,0,0,0.9);
 		color: white;
-		mix-blend-mode: hard-light;
 		h2 {
-			max-width: 70%;
+			max-width: calc(70% - 8vw);
 			text-align: center;
-			font-size: 2.5em;
+			font-size: calc(1em + 1.5vw);
 		}
 	}
 }
@@ -139,8 +138,8 @@ header {
 	.hero {	
 		.text {
 			h2 {
-				padding-top: 4em;
-				font-size: 1.3em;
+				padding-top: 5em;
+				// font-size: 1.3em;
 				font-weight: 500;
 			}
 		}
@@ -157,8 +156,9 @@ header {
 		margin: 0 calc( 2 * #{$site-margin});
 	}
 	.card {
-		background: #ffffffaa;
-		@extend %shadow1;
+		background: rgba(255, 255, 255, 0.85);
+		// @extend %shadow1;
+		box-shadow: 0 2px 5px -2px rgba(238, 101, 22, 0.596), 0 4px 8px -2px rgba(235, 180, 63, 0.3), 0 3px 7px rgba(226, 132, 132, 0.2);
 		border-radius: 10px;
 		overflow: hidden;
 		img {
