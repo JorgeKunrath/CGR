@@ -175,14 +175,14 @@ header {
 		}
 	}
 }
-@media (max-width: 900px) {	
+@media (max-width: 1100px) {	
 	.etapas-de-projeto {
 		padding: 3em 0 2em;
 		.grid-cards {
 			grid-template-columns: repeat(1, 1fr);
 		}
 		.card {
-			max-width: 400px;
+			max-width: 500px;
 			margin: 1em auto;
 		}
 	}
