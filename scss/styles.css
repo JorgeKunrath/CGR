@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Roboto+Slab:300,400,700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.etapas-de-projeto .card {
+  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+.hero .text, .contato .text-acabamento {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #ffe97c;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+header {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 5% 2em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  color: white;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo .cgr-logo {
+  font-size: 4em;
+  font-family: 'Roboto Slab', serif;
+}
+
+header .logo .cgr-logo img {
+  width: 100px;
+  padding: 10px 0;
+}
+
+header .logo .descricao {
+  text-align: center;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav a {
+  display: block;
+  position: relative;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: black;
+  background: white;
+}
+
+header nav a:focus i, header nav a:hover i {
+  color: #b46600;
+}
+
+header nav a i {
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 700px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.hero .text {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #C02425;
+  background: linear-gradient(160deg, #7D6504, #310000);
+  color: white;
+  mix-blend-mode: hard-light;
+}
+
+.hero .text h2 {
+  max-width: 70%;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+@media (max-width: 900px) {
+  .hero .text h2 {
+    padding-top: 4em;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+}
+
+.etapas-de-projeto {
+  padding: 6em 0 4em;
+}
+
+.etapas-de-projeto .grid-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+  margin: 0 calc( 2 * 5%);
+}
+
+.etapas-de-projeto .card {
+  background: #ffffffaa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.etapas-de-projeto .card img {
+  width: 100%;
+  height: calc(200px + 3vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.etapas-de-projeto .card h4 {
+  font-size: 1.3em;
+  padding: 0.8rem 1rem 0.5rem;
+}
+
+.etapas-de-projeto .card p {
+  padding: 0rem 1rem 1rem;
+}
+
+@media (max-width: 900px) {
+  .etapas-de-projeto {
+    padding: 3em 0 2em;
+  }
+  .etapas-de-projeto .grid-cards {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .etapas-de-projeto .card {
+    max-width: 400px;
+    margin: 1em auto;
+  }
+}
+
+.contato {
+  padding: 3em 0;
+  margin: 0 5%;
+}
+
+.contato h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.contato .text-acabamento {
+  margin: 1em auto;
+}
+
+.contato .text-acabamento p {
+  text-align: center;
+  max-width: 700px;
+}
+
+.contato .infos {
+  padding: 2em 0;
+}
+
+.contato .infos ul {
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contato .infos li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 2em 0;
+  font-size: 1.3em;
+  color: #9b5800;
+}
+
+.contato .infos li a {
+  color: #9b5800;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border-bottom: 2px solid;
+}
+
+.contato .infos li a:focus, .contato .infos li a:hover {
+  color: #351e00;
+}
+
+.contato .infos i {
+  max-width: 30px;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 30px;
+  margin-right: 1em;
+}
+
+@media (max-width: 700px) {
+  .contato h3 {
+    font-size: 1.5em;
+  }
+  .contato .infos li {
+    font-size: 0.9em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .contato .infos i {
+    font-size: 1.3rem;
+    min-width: 20px;
+    margin-right: 0;
+    padding-bottom: 0.5em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
